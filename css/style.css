@@ -1,0 +1,149 @@
+@import url("./value.css");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.calculator{
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    aspect-ratio: 9/16;
+    width: 100%;
+    min-width: 349px;
+    max-width: 350px;
+    
+    border: 2px solid var(--btn-bg-color);
+    border-radius: 10px;
+    
+    box-shadow: 2px 2px 5px var(--btn-bg-color);
+}
+
+.calculator > .display{
+    padding: 10px;
+    height: 20%;
+    
+    background-color: var(--display-color);
+    
+    border-radius: 5px;
+    
+    transition: all 0.5s ease;
+}
+
+.calc-input{
+    position: relative;
+    margin-top: 10%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+
+    text-align: right;
+    font-family: "Digit";
+    font-size: 4em;
+}
+
+.calc-input:focus{
+    outline: none;
+}
+
+/* .calc-input::-webkit-outer-spin-button,
+.calc-input::-webkit-inner-spin-button {
+    display: none;
+} */
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    height: 70%;
+}
+
+.calc-btn{
+    border: none;
+    border-radius: 5px;
+    
+    font-size: 1.5em;
+    
+    color: var(--text-color);
+    background-color: transparent;
+    box-shadow: 2px 2px 5px var(--btn-bg-color);
+    
+    cursor: pointer;
+}
+
+.btn-invert{
+    font-weight: bold;
+    
+    color: var(--text-color);
+    background-color: var(--display-color);
+}
+
+.w-2{ grid-column: span 2; }
+
+.first-row-set{ padding: 20px 0; }
+
+/* 
+    -----------------------
+    Theme Changing Checkbox
+    -----------------------
+*/
+
+.theme-switch{
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.theme-switch input{ display: none; }
+
+.theme-toggle-label{
+    display: inline-block;
+    position: relative;
+
+    width: 40px;
+    height: 20px;
+
+    border-radius: 50px;
+    background-color: var(--btn-bg-color);
+}
+
+.theme-toggle-label::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+    border: 1px solid var(--btn-bg-color);
+    background-color: var(--btn-bg-color2);
+
+    transition: transform 0.3s ease;
+}
+
+.theme-switch input:checked + .theme-toggle-label::after{
+    transform: translateX(20px);
+}
