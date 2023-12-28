@@ -1,20 +1,22 @@
-const themeToggle = document.getElementById("themeToggle");
+function init_theme(){
+    const themeToggle = document.getElementById("themeToggle");
+    const body = document.body;
+    
+    const isDarkTheme = localStorage.getItem("theme") == "dark";
+    
+    themeToggle.addEventListener('change', function() {
+        body.classList.toggle("dark-theme", this.checked);
+        body.classList.toggle("light-theme", !this.checked);
+        
+        let theme = (this.checked)? "dark" : "light";
+        localStorage.setItem("theme", theme);
+    });
+    
 
-themeToggle.addEventListener('change', function() {
-    if(this.checked){
-        document.documentElement.style.setProperty("--text-color", "#a492df");
-        document.documentElement.style.setProperty("--bg-color", "#18122B");
-        document.documentElement.style.setProperty("--display-color", "#443C68");
-        document.documentElement.style.setProperty("--btn-bg-color", "#393053");
-        document.documentElement.style.setProperty("--btn-bg-color2", "#635985");
-    }else{
-        document.documentElement.style.setProperty("--text-color", "#BBAB8C");
-        document.documentElement.style.setProperty("--bg-color", "#FAEED1");
-        document.documentElement.style.setProperty("--display-color", "#DED0B6");
-        document.documentElement.style.setProperty("--btn-bg-color", "#BBAB8C");
-        document.documentElement.style.setProperty("--btn-bg-color2", "#FDF7E4");
-    }
-});
+    themeToggle.checked = isDarkTheme;
+    body.classList.toggle("dark-theme", isDarkTheme);
+    body.classList.toggle("light-theme", !isDarkTheme);
+}
 
 var button_container;
 

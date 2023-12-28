@@ -1,5 +1,21 @@
 @import url("./value.css");
 
+body.light-theme{
+    --text-color: var(--text-color-light);
+    --bg-color: var(--bg-color-light);
+    --display-color: var(--display-color-light);
+    --btn-bg-color: var(--btn-bg-color-light);
+    --btn-bg-color2: var(--btn-bg-color2-light);
+}
+
+body.dark-theme{
+    --text-color: var(--text-color-dark);
+    --bg-color: var(--bg-color-dark);
+    --display-color: var(--display-color-dark);
+    --btn-bg-color: var(--btn-bg-color-dark);
+    --btn-bg-color2: var(--btn-bg-color2-dark);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -32,6 +48,16 @@ body{
     border-radius: 10px;
     
     box-shadow: 2px 2px 5px var(--btn-bg-color);
+    font-family: "roboto-normal";
+}
+
+.calc-head{
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "roboto-itallic";
+    font-size: 1.5em;
+    color: var(--text-color);
 }
 
 .calculator > .display{

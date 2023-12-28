@@ -1,20 +1,28 @@
 :root{
-    --text-color: #BBAB8C;
-    --bg-color: #FAEED1;
-    --display-color: #DED0B6;
-    --btn-bg-color: #BBAB8C;
-    --btn-bg-color2: #FDF7E4;
-
-    /* 
-    --text-color: #a492df;
-    --bg-color: #18122B;
-    --display-color: #443C68;
-    --btn-bg-color: #393053;
-    --btn-bg-color2: #635985;
-    */
+    --text-color-light: #BBAB8C;
+    --bg-color-light: #FAEED1;
+    --display-color-light: #DED0B6;
+    --btn-bg-color-light: #BBAB8C;
+    --btn-bg-color2-light: #FDF7E4;
+    
+    --text-color-dark: #a492df;
+    --bg-color-dark: #18122B;
+    --display-color-dark: #443C68;
+    --btn-bg-color-dark: #393053;
+    --btn-bg-color2-dark: #635985;
 }
 
 @font-face {
     font-family: "digit";
     src: url("../fonts/Let\'s\ go\ Digital\ Regular.ttf");
+}
+
+@font-face {
+    font-family: "roboto-normal";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "roboto-itallic";
+    src: url("../fonts/Roboto-Italic.ttf");
 }

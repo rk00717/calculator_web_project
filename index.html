@@ -6,12 +6,15 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="light-theme">
     <div class="container">
         <div class="calculator">
-            <div class="theme-switch">
-                <input type="checkbox" id="themeToggle" />
-                <label for="themeToggle" class="theme-toggle-label"></label>
+            <div class="calc-head">
+                <div class="title">Calculator</div>
+                <div class="theme-switch">
+                    <input type="checkbox" id="themeToggle" />
+                    <label for="themeToggle" class="theme-toggle-label"></label>
+                </div>
             </div>
             <div class="display">
                 <input type="text" class="calc-input">
@@ -22,6 +25,7 @@
 </body>
 <script src="./js/style.js"></script>
 <script>
+    init_theme();
     init_buttons();
 </script>
 </html>
