@@ -64,16 +64,32 @@ function add_button(innerElement, clickAction = "ADD", ...classNames){
 
     switch(clickAction){
         case "ADD":
-            button.addEventListener("click", function(){add_value(innerElement)});
+            button.addEventListener("click", 
+                function(){
+                    add_value(innerElement)
+                }
+            );
             break;
         case "CLEAR":
-            button.addEventListener("click", function(){clear_values()});
+            button.addEventListener("click", 
+                function(){
+                    clear_values()
+                }
+            );
             break;
         case "REMOVE":
-            button.addEventListener("click", function(){remove_value()});
+            button.addEventListener("click", 
+                function(){
+                    remove_value()
+                }
+            );
             break;
         case "CALCULATE":
-            button.addEventListener("click", function(){calculate()});
+            button.addEventListener("click", 
+                function(){
+                    calculate()
+                }
+            );
             break;
         default:
             console.log(typeof(innerElement) + " " + innerElement);
@@ -102,7 +118,7 @@ function remove_value(){
     }
 
     result_display.value = result_display.value.slice(0, -1);
-    
+
     if(result_display.value == ""){
         result_display.value = "0";
     }
